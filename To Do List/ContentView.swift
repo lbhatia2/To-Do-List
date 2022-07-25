@@ -9,29 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var toDoList = ToDoList()
+    @State private var showingAddItemView = false
     var body: some View {
         NavigationView{
-        List{
-            ForEach(toDoList.items){item  in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(item.priority)
-                            .font(.headline)
-                        Text(item.description)
-                    }
-                    Spacer()
-                    Text(item.dueDate, style: .date)
-                }}
-            .onMove{indices , newOffset in
-                toDoList.items.move(fromOffsets: indices, toOffset: newOffset)
+            List {
+                ForEach(toDoList.items){item  in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(item.priority)
+                                .font(.headline)
+                            Text(item.description)
+                        }
+                        Spacer()
+                        Text(item.dueDate, style: .date)
+                    }}
+                .onMove{indices , newOffset in
+                    toDoList.items.move(fromOffsets: indices, toOffset: newOffset)
+                }
+                .onDelete{indexSet in
+                    toDoList.items.remove(atOffsets: indexSet )
+                }
+                
             }
-            .onDelete{indexSet in
-                toDoList.items.remove(atOffsets: indexSet )
-            }
-            
-        }
-        .navigationBarTitle("To Do List", displayMode: .inline)
-        .navigationBarItems(leading: EditButton())
+            .sheet(isPresented: $showingAddItemView, content: {
+                AddItemView(toDoList: toDoList)
+            })
+            .navigationBarTitle("To Do List", displayMode: .inline)
+            .navigationBarItems(leading: EditButton(),
+                                trailing:Button(action: {
+                showingAddItemView = true}){
+                    Image(systemName: "plus")
+                })
         }
     }
 }

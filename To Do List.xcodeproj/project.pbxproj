@@ -12,6 +12,7 @@
 		B0425EC5288EE27200A01CD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0425EC4288EE27200A01CD3 /* Assets.xcassets */; };
 		B0425EC8288EE27200A01CD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0425EC7288EE27200A01CD3 /* Preview Assets.xcassets */; };
 		B0425ECF288EE92100A01CD3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0425ECE288EE92100A01CD3 /* File.swift */; };
+		B0425ED1288EEDB300A01CD3 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0425ED0288EEDB300A01CD3 /* AddItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B0425EC4288EE27200A01CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0425EC7288EE27200A01CD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0425ECE288EE92100A01CD3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		B0425ED0288EEDB300A01CD3 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				B0425EC0288EE27100A01CD3 /* To_Do_ListApp.swift */,
 				B0425EC2288EE27100A01CD3 /* ContentView.swift */,
+				B0425ED0288EEDB300A01CD3 /* AddItemView.swift */,
 				B0425ECE288EE92100A01CD3 /* File.swift */,
 				B0425EC4288EE27200A01CD3 /* Assets.xcassets */,
 				B0425EC6288EE27200A01CD3 /* Preview Content */,
@@ -143,6 +146,7 @@
 				B0425EC3288EE27100A01CD3 /* ContentView.swift in Sources */,
 				B0425ECF288EE92100A01CD3 /* File.swift in Sources */,
 				B0425EC1288EE27100A01CD3 /* To_Do_ListApp.swift in Sources */,
+				B0425ED1288EEDB300A01CD3 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
